@@ -1,11 +1,15 @@
 {
   "name": "react-nested-menu",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "lib/index.js",
   "author": {
     "name": "George Holmes II",
     "email": "george@georgeholmesii.com",
     "url": "http://georgeholmesii.com"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/gholme4/react-nested-menu"
   },
   "dependencies": {
     "autoprefixer": "7.1.2",
