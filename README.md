@@ -15,11 +15,19 @@ npm install react-nested-menu --save
 React Nested Menu renders HTML of a multi-level navigation menu. The structure of the menu is generated from an array of objects
 ```
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import ReactNestedMenu from 'ReactNestedMenu';
 
 
 class App extends Component {
+    linkTransformer = (menuItem) => {
+
+        return (
+            <Link to={menuItem.url}>{ menuItem.title }</Link>
+        )
+    }
+
     render() {
 
         const menu = [
@@ -104,6 +112,7 @@ class App extends Component {
                     navParentClassname="vertical menu nested"
                     navTopLevelParentClassname="vertical menu"
                     navChildClassname="child"
+                    linkTransformer={this.linkTransformer}
                     menuData={menu}/>
             </div>
         );
