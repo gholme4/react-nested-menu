@@ -6,6 +6,7 @@ class ReactNestedMenu extends Component {
     constructor(props) {
         super(props);
         this.state = { menu: null };
+        this.isTopLevelParent = true;
     }
 
     componentDidMount() {
@@ -16,6 +17,7 @@ class ReactNestedMenu extends Component {
     componentWillReceiveProps(nextProps) {
         const menu = this.buildMenu(this.nextProps.menuData);
         this.setState({ menu: menu });
+        this.isTopLevelParent = true;
     }
 
     linkTransformer = (navItem) => {
@@ -35,19 +37,39 @@ class ReactNestedMenu extends Component {
     }
 
     buildMenu = (menuData) => {
-        const parentEl = React.createFactory(this.props.navParentElement);
+        let parentClassname  = null;
+        if (this.isTopLevelParent)
+        {
+            parentClassname = `${this.props.navTopLevelParentClassname}`;
+            this.isTopLevelParent = false;
+        }
+        else
+        {
+            parentClassname = `${this.props.navParentClassname}`;
+        }
+
         const childMenuItems = menuData.map((el) => {
-            return (
-                <li key={el[this.props.arrayKey] ? el[this.props.arrayKey] : uid(15)} className={this.props.navChildClassname}>
+
+
+            const ChildTag = `${this.props.navChildElement}`;
+            const childChildren = (
+                <ChildTag className={this.props.navChildClassnam} key={el[this.props.arrayKey] ? el[this.props.arrayKey] : uid(15)}>
                     { this.linkTransformer(el) }
-                    { el.children ? this.buildMenu(el.children) : null }
-                </li>
+                    { el[this.props.childMenuProperty] ? this.buildMenu(el[this.props.childMenuProperty]) : null }
+                </ChildTag>
             );
+
+            return childChildren;
         });
 
-        const reactParentEl = parentEl({ className: this.props.navParentClassname}, childMenuItems);
+        const ParentTag = `${this.props.navParentElement}`;
 
-        return reactParentEl;
+        return (
+            <ParentTag className={parentClassname}>
+                { childMenuItems }
+            </ParentTag>
+        );
+
 
     }
 
@@ -62,7 +84,9 @@ ReactNestedMenu.propTypes = {
     navParentElement: PropTypes.string,
     navChildElement: PropTypes.string,
     navParentClassname: PropTypes.string,
+    navTopLevelParentClassname: PropTypes.string,
     navChildClassname: PropTypes.string,
+    childMenuProperty: PropTypes.string,
     navUrlProperty: PropTypes.string,
     navTitleProperty: PropTypes.string,
     arrayKey: PropTypes.string,
@@ -74,8 +98,10 @@ ReactNestedMenu.defaultProps = {
     navParentElement: 'ul',
     navChildElement: 'li',
     navParentClassname: '',
+    navTopLevelParentClassname: '',
     navChildClassname: '',
     navUrlProperty: 'url',
+    childMenuProperty: 'children',
     navTitleProperty: 'title',
     arrayKey: 'id'
 };

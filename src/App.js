@@ -13,7 +13,8 @@ class App extends Component {
                 <div className="row">
                     <div className="columns">
                         <ReactNestedMenu
-                            navParentClassname="vertical menu" 
+                            navParentClassname="vertical menu nested"
+                            navTopLevelParentClassname="vertical menu"
                             menuData={menu}/>
                     </div>
                 </div>

@@ -10,6 +10,27 @@ const menu = [
         url: "/about-us"
     },
     {
+        title: "Team",
+        url: "/team",
+        children: [
+            {
+                id: 8,
+                title: "Tim Drake",
+                url: "/tim-drake"
+            },
+            {
+                id: 9,
+                title: "Jason Todd",
+                url: "/jason-todd"
+            },
+            {
+                id: 10,
+                title: "Richard Grayson",
+                url: "/richard-grayson"
+            }
+        ]
+    },
+    {
         title: "Services",
         url: "/services",
         children: [
@@ -34,7 +55,23 @@ const menu = [
         id: 4,
         title: "Contact",
         url: "/contact"
-    }
+    },
+    {
+        title: "Social",
+        url: "/social",
+        children: [
+            {
+                id: 11,
+                title: "Twitter",
+                url: "/twitter"
+            },
+            {
+                id: 12,
+                title: "Facebook",
+                url: "/facebook"
+            }
+        ]
+    },
 ];
 
 export default menu;
