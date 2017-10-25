@@ -1,1 +1,1 @@
-export { default as ReactNestedMenu } from './components/ReactNestedMenu';
+export { default as ReactNestedMenu } from './ReactNestedMenu';
