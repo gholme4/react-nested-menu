@@ -1,7 +1,6 @@
 {
   "name": "react-nested-menu",
   "version": "1.0.0",
-  "private": true,
   "main": "lib/index.js",
   "author": {
     "name": "George Holmes II",
