@@ -2,6 +2,8 @@
 
 React JS component for rendering nested navigation menus
 
+#### [Example](https://github.com/gholme4/react-nested-menu/tree/master/example)
+
 ### Installation
 
 ```
