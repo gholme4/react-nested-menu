@@ -10,7 +10,6 @@ const menu = [
         url: "/about-us"
     },
     {
-        id: 3,
         title: "Services",
         url: "/services",
         children: [

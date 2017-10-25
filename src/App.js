@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import './App.css';
-import ReactNestedMenu from './ReactNestedMenu';
-
+import ReactNestedMenu from './components/ReactNestedMenu';
+import menu from './test-data/menu';
 class App extends Component {
     render() {
         return (
             <div className="App">
                 <header className="App-header">
-                    <h1 className="App-title">React Nested Menu</h1>
+                    <div className="top-bar">
+                        React Nested Menu
+                    </div>
                 </header>
-                <p className="App-intro">
-
-                </p>
+                <div className="row">
+                    <div className="columns">
+                        <ReactNestedMenu
+                            navParentClassname="vertical menu" 
+                            menuData={menu}/>
+                    </div>
+                </div>
             </div>
         );
     }

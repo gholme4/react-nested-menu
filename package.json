@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "private": true,
     "author": {
-        "name" : "George Holmes II",
-        "email" : "george@georgeholmesii.com",
-        "url" : "http://georgeholmesii.com"
+        "name": "George Holmes II",
+        "email": "george@georgeholmesii.com",
+        "url": "http://georgeholmesii.com"
     },
     "dependencies": {
         "prop-types": "^15.6.0",
@@ -19,5 +19,11 @@
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject"
+    },
+    "devDependencies": {
+        "enzyme": "^3.1.0",
+        "enzyme-adapter-react-16": "^1.0.2",
+        "jest-cli": "^21.2.1",
+        "react-test-renderer": "^16.0.0"
     }
 }
