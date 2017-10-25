@@ -17,7 +17,7 @@ React Nested Menu renders HTML of a multi-level navigation menu. The structure o
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactDOM from 'react-dom';
-import ReactNestedMenu from 'ReactNestedMenu';
+import { ReactNestedMenu } from 'react-nested-menu';
 
 
 class App extends Component {
