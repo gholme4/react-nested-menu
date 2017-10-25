@@ -9,9 +9,9 @@ it('renders without crashing', () => {
     const wrapper = shallow(<ReactNestedMenu menuData={testData}/>);
 });
 
-it('renders a <ul> tag', () => {
+it('renders 4 <ul> tags', () => {
     const wrapper = shallow(<ReactNestedMenu menuData={testData}/>);
-    expect(wrapper.find('ul').length).toEqual(2);
+    expect(wrapper.find('ul').length).toEqual(4);
 });
 
 it('is passed linkTransformer function that returns a React element', () => {

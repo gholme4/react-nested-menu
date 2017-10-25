@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactNestedMenu from './components/ReactNestedMenu';
+//import ReactNestedMenu from './ReactNestedMenu';
 import menu from './test-data/menu';
 class App extends Component {
     render() {
