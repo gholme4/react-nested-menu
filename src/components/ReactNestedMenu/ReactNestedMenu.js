@@ -15,7 +15,7 @@ class ReactNestedMenu extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        const menu = this.buildMenu(this.nextProps.menuData);
+        const menu = this.buildMenu(this.props.menuData);
         this.setState({ menu: menu });
         this.isTopLevelParent = true;
     }
