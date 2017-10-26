@@ -15,9 +15,10 @@ class ReactNestedMenu extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        const menu = this.buildMenu(this.props.menuData);
-        this.setState({ menu: menu });
         this.isTopLevelParent = true;
+        const menu = this.buildMenu(nextProps.menuData);
+        this.setState({ menu: menu });
+
     }
 
     linkTransformer = (navItem) => {
