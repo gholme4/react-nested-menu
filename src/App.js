@@ -6,23 +6,7 @@ class App extends Component {
     constructor() {
         super();
         this.state = { menu: menu };
-        setTimeout(() => {
-            this.setState({
-                menu: [
-                    {
-                        id: 1,
-                        title: "Home",
-                        url: "/"
-                    },
-                    {
-                        id: 2,
-                        title: "About Us",
-                        url: "/about-us"
-                    }
-                ]
-            });
-
-        }, 5000);
+        
     }
 
     render() {

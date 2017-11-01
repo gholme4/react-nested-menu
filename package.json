@@ -1,6 +1,6 @@
 {
   "name": "react-nested-menu",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "lib/index.js",
   "author": {
     "name": "George Holmes II",
@@ -11,6 +11,7 @@
       "type": "git",
       "url": "https://github.com/gholme4/react-nested-menu"
   },
+  "keywords" : ["menu", "navigation", "nested menu", "multi-level menu", "navbar", "dropdown"],
   "dependencies": {
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
