@@ -54,7 +54,7 @@ class ReactNestedMenu extends Component {
 
             const ChildTag = `${this.props.navChildElement}`;
             const childChildren = (
-                <ChildTag className={this.props.navChildClassnam} key={el[this.props.arrayKey] ? el[this.props.arrayKey] : uid(15)}>
+                <ChildTag className={this.props.navChildClassname} key={el[this.props.arrayKey] ? el[this.props.arrayKey] : uid(15)}>
                     { this.linkTransformer(el) }
                     { el[this.props.childMenuProperty] ? this.buildMenu(el[this.props.childMenuProperty]) : null }
                 </ChildTag>
