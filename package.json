@@ -1,7 +1,7 @@
 {
   "name": "react-nested-menu-update",
-  "version": "1.1.0",
-  "private": true,
+  "version": "1.0.9",
+  "private": false,
   "main": "lib/index.js",
   "dependencies": {
     "braces": "^3.0.2",
